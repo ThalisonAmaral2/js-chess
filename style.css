@@ -1,0 +1,102 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+body{
+    background-color: rgb(34, 34, 34);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+#chessboard {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+    user-select: none;
+
+}
+
+.square {
+    height: 62.5px;
+    width: 62.5px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    /* box-sizing: border-box; */
+    position: relative;
+}
+
+.light {
+    background-color: #ffffff;
+}
+.dark {
+    background-color: #1c8252;
+}
+
+
+.highlight {
+    height: 20px;
+    width: 20px;
+
+    bottom:20px;
+    left: 20px;
+
+    border-radius: 50%;
+    background-color: rgb(172, 37, 37);
+    position: absolute;
+    z-index:  1;
+
+}
+.white{
+    
+    margin-top: 0;
+    height: 62.5px;
+    position: relative;
+    z-index: 1;
+
+}
+
+
+.black{
+    height: 62.5px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.white:hover{
+    transition: 0.1s;
+    margin-top: -2px;
+    
+}
+.black:hover{
+    transition: 0.1s;
+    margin-top: -2px;
+}
+
+
+#buttons {
+    margin: auto;
+    text-align: center;
+}
+
+.resign{
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+
+}
+.resign:hover{
+    cursor: pointer;
+}
